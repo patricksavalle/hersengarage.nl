@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="07d6c33b-1a82-4223-9e57-852637f1cb6d" name="Default Changelist" comment="Updates" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/system/user/addons/dynamic_link" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="ProjectId" id="1fSZ6yOu4dWiEPBrGR8x83YAiLD" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JSON" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\expressionengine\system\user\addons\activity_stream" />
+      <recent name="C:\xampp\htdocs\expressionengine\system\user\addons" />
+      <recent name="C:\xampp\htdocs\expressionengine\system\user\addons\hash_tag" />
+      <recent name="C:\xampp\htdocs\expressionengine\system\user\templates\hersengarage\embeds.group" />
+      <recent name="C:\xampp\htdocs\expressionengine\system\user\templates\hersengarage" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\expressionengine\themes\user\hersengarage\asset\img" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="07d6c33b-1a82-4223-9e57-852637f1cb6d" name="Default Changelist" comment="" />
+      <created>1596213284409</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1596213284409</updated>
+      <workItem from="1596213285934" duration="9481000" />
+      <workItem from="1596271683620" duration="30450000" />
+      <workItem from="1596482365482" duration="61178000" />
+      <workItem from="1596759781508" duration="2003000" />
+      <workItem from="1596792382307" duration="1000" />
+      <workItem from="1596792394403" duration="89063000" />
+      <workItem from="1597219542249" duration="1067000" />
+      <workItem from="1597220644645" duration="348000" />
+      <workItem from="1598030678145" duration="4512000" />
+      <workItem from="1598342115027" duration="4765000" />
+      <workItem from="1598435270264" duration="373000" />
+      <workItem from="1598435724969" duration="528000" />
+      <workItem from="1598436285659" duration="333000" />
+      <workItem from="1598436637511" duration="41000" />
+      <workItem from="1598436716466" duration="291000" />
+      <workItem from="1598437026023" duration="12000" />
+    </task>
+    <task id="LOCAL-00001" summary="Remove index.php">
+      <created>1596217664542</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1596217664542</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Initial">
+      <created>1596391387449</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1596391387449</updated>
+    </task>
+    <task id="LOCAL-00003" summary="tweaks">
+      <created>1596398263914</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1596398263914</updated>
+    </task>
+    <task id="LOCAL-00004" summary="tweaks">
+      <created>1596446565444</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1596446565444</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Introduced template variables.">
+      <created>1596452938026</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1596452938027</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Moved background images to asset/img">
+      <created>1596453207409</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1596453207409</updated>
+    </task>
+    <task id="LOCAL-00007" summary="refactors">
+      <created>1596473255161</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1596473255161</updated>
+    </task>
+    <task id="LOCAL-00008" summary="added a linkdump channel">
+      <created>1596578892401</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1596578892401</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Tweaks needed after a few days live operation.">
+      <created>1596808138660</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1596808138660</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Ongoing tweaks">
+      <created>1597070588509</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1597070588509</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Initial version. Operational on hersengarage.nl.">
+      <created>1597220230871</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1597220230871</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Initial version. Operational on hersengarage.nl.">
+      <created>1597220683922</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1597220683922</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Updates">
+      <created>1598349801679</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1598349801679</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Updates">
+      <created>1598350136129</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1598350136129</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Updates">
+      <created>1598350799236</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1598350799236</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/system/user/addons/char_limit" />
+      <path value="$PROJECT_DIR$/system/user/addons/dynamic_link" />
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+    <MESSAGE value="Remove index.php" />
+    <MESSAGE value="Initial" />
+    <MESSAGE value="tweaks" />
+    <MESSAGE value="Introduced template variables." />
+    <MESSAGE value="Moved background images to asset/img" />
+    <MESSAGE value="refactors" />
+    <MESSAGE value="added a linkdump channel" />
+    <MESSAGE value="Tweaks needed after a few days live operation." />
+    <MESSAGE value="Ongoing tweaks" />
+    <MESSAGE value="Initial version. Operational on hersengarage.nl." />
+    <MESSAGE value="Updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updates" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="609" y="113" key="#Deployment" timestamp="1596390665583">
+      <screen x="0" y="0" width="1707" height="960" />
+    </state>
+    <state x="609" y="113" key="#Deployment/0.0.1707.960@0.0.1707.960" timestamp="1596390665583" />
+    <state x="914" y="303" key="#Deployment/0.0.2560.1440@0.0.2560.1440" timestamp="1596219125647" />
+    <state x="247" y="512" width="758" height="725" key="#Options" timestamp="1596228047514">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="247" y="512" width="758" height="725" key="#Options/0.0.2560.1440@0.0.2560.1440" timestamp="1596228047514" />
+    <state x="124" y="297" key="#SQL_Dialects" timestamp="1597054881318">
+      <screen x="0" y="0" width="1707" height="960" />
+    </state>
+    <state x="124" y="297" key="#SQL_Dialects/0.0.1707.960@0.0.1707.960" timestamp="1597054881318" />
+    <state x="894" y="286" key="#SSH_Configurations" timestamp="1596218916965">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="894" y="286" key="#SSH_Configurations/0.0.2560.1440@0.0.2560.1440" timestamp="1596218916965" />
+    <state x="451" y="141" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597001356860">
+      <screen x="0" y="0" width="1707" height="960" />
+    </state>
+    <state x="451" y="141" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1707.960@0.0.1707.960" timestamp="1597001356860" />
+    <state x="384" y="219" width="1492" height="1016" key="CommitChangelistDialog2" timestamp="1596217351701">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="384" y="219" width="1492" height="1016" key="CommitChangelistDialog2/0.0.2560.1440@0.0.2560.1440" timestamp="1596217351701" />
+    <state x="228" y="150" width="2214" height="1140" key="DiffContextDialog" timestamp="1598351424563">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="152" y="100" width="1476" height="760" key="DiffContextDialog/0.0.1707.960@0.0.1707.960" timestamp="1597153305413" />
+    <state x="228" y="150" width="2214" height="1140" key="DiffContextDialog/0.0.2560.1440@0.0.2560.1440" timestamp="1598351424563" />
+    <state x="679" y="123" width="1475" height="1031" maximized="true" key="DirDiffDialog" timestamp="1598436621391">
+      <screen x="0" y="0" width="1707" height="960" />
+    </state>
+    <state x="412" y="188" width="980" height="688" maximized="true" key="DirDiffDialog/0.0.1707.960@0.0.1707.960" timestamp="1598436621391" />
+    <state x="679" y="123" width="1475" height="1031" key="DirDiffDialog/0.0.2560.1440@0.0.2560.1440" timestamp="1598352062832" />
+    <state x="787" y="181" key="FileChooserDialogImpl" timestamp="1598435805988">
+      <screen x="0" y="0" width="1707" height="960" />
+    </state>
+    <state x="787" y="181" key="FileChooserDialogImpl/0.0.1707.960@0.0.1707.960" timestamp="1598435805988" />
+    <state x="1181" y="272" key="FileChooserDialogImpl/0.0.2560.1440@0.0.2560.1440" timestamp="1596214269282" />
+    <state x="695" y="353" key="Github.ShareDialog" timestamp="1598436821697">
+      <screen x="0" y="0" width="1707" height="960" />
+    </state>
+    <state x="695" y="353" key="Github.ShareDialog/0.0.1707.960@0.0.1707.960" timestamp="1598436821697" />
+    <state x="688" y="395" key="NewPhpFileDialog" timestamp="1596213562524">
+      <screen x="0" y="0" width="1707" height="960" />
+    </state>
+    <state x="688" y="395" key="NewPhpFileDialog/0.0.1707.960@0.0.1707.960" timestamp="1596213562524" />
+    <state x="494" y="79" key="SettingsEditor" timestamp="1598437037132">
+      <screen x="0" y="0" width="1707" height="960" />
+    </state>
+    <state x="494" y="79" key="SettingsEditor/0.0.1707.960@0.0.1707.960" timestamp="1598437037132" />
+    <state x="814" y="286" key="SettingsEditor/0.0.2560.1440@0.0.2560.1440" timestamp="1596218956248" />
+    <state x="744" y="376" key="VCS.EditChangelistDialog" timestamp="1596382740999">
+      <screen x="0" y="0" width="1707" height="960" />
+    </state>
+    <state x="744" y="376" key="VCS.EditChangelistDialog/0.0.1707.960@0.0.1707.960" timestamp="1596382740999" />
+    <state x="609" y="264" key="Vcs.Push.Dialog.v2" timestamp="1598436451507">
+      <screen x="0" y="0" width="1707" height="960" />
+    </state>
+    <state x="609" y="264" key="Vcs.Push.Dialog.v2/0.0.1707.960@0.0.1707.960" timestamp="1598436451507" />
+    <state x="914" y="396" key="Vcs.Push.Dialog.v2/0.0.2560.1440@0.0.2560.1440" timestamp="1598351369196" />
+    <state x="427" y="161" key="VcsDiffUtil.ChangesDialog" timestamp="1598436428091">
+      <screen x="0" y="0" width="1707" height="960" />
+    </state>
+    <state x="427" y="161" key="VcsDiffUtil.ChangesDialog/0.0.1707.960@0.0.1707.960" timestamp="1598436428091" />
+    <state x="640" y="242" key="VcsDiffUtil.ChangesDialog/0.0.2560.1440@0.0.2560.1440" timestamp="1598351157100" />
+    <state x="533" y="148" width="713" height="736" key="find.popup" timestamp="1598200150842">
+      <screen x="0" y="0" width="1707" height="960" />
+    </state>
+    <state x="533" y="148" width="713" height="736" key="find.popup/0.0.1707.960@0.0.1707.960" timestamp="1598200150842" />
+    <state x="799" y="222" width="1070" height="1104" key="find.popup/0.0.2560.1440@0.0.2560.1440" timestamp="1596535844716" />
+    <state x="1190" y="394" key="ftp.server.browser" timestamp="1596219124288">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="1190" y="394" key="ftp.server.browser/0.0.2560.1440@0.0.2560.1440" timestamp="1596219124288" />
+    <state x="428" y="217" key="run.anything.popup" timestamp="1597088639684">
+      <screen x="0" y="0" width="1707" height="960" />
+    </state>
+    <state x="428" y="217" key="run.anything.popup/0.0.1707.960@0.0.1707.960" timestamp="1597088639684" />
+    <state x="348" y="167" width="840" height="690" key="search.everywhere.popup" timestamp="1597136090107">
+      <screen x="0" y="0" width="1707" height="960" />
+    </state>
+    <state x="348" y="167" width="840" height="690" key="search.everywhere.popup/0.0.1707.960@0.0.1707.960" timestamp="1597136090107" />
+    <state x="522" y="250" width="840" height="1034" key="search.everywhere.popup/0.0.2560.1440@0.0.2560.1440" timestamp="1596543903009" />
+  </component>
+</project>

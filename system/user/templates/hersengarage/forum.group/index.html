@@ -1,0 +1,60 @@
+{layout="layouts/site"}
+{layout:set name='og_title'}{site_name}{/layout:set}
+{layout:set name='og_url'}{path='{segment_1}'}{/layout:set}
+{layout:set name='og_description'}{site_description}{/layout:set}
+{layout:set:append name='og_image'}{hersengarage-small-poster}{/layout:set:append}
+{layout:set name='page_type'}forum{/layout:set}
+{layout:set name='seo_desc'}{site_description}{/layout:set}
+{layout:set name='keywords'}{/layout:set}
+
+<aside>
+  {embed="embeds/logo"}
+  {embed="embeds/categories"}
+  <ul class="users">
+    {exp:query sql="SELECT *
+		FROM exp_members
+		WHERE group_id in ('1', '5') AND total_comments>0
+		ORDER BY last_activity DESC
+		LIMIT 50"}
+    {if anon}
+    <li>{last_activity format="%H:%i"} <b>&lt;anoniem&gt;</b> <img class="avatar" src="{anonymous-user-icon}" alt=""/></li>
+    {if:else}
+    {if avatar_filename}
+    <li>{last_activity format="%H:%i"} <b>{screen_name}</b><img class="avatar" src="/images/avatars/{avatar_filename}" alt=""/></li>
+    {if:else}
+    <li>{last_activity format="%H:%i"} <b>{screen_name}</b><img class="avatar" src="{anonymous-user-icon}" alt=""/></li>
+    {/if}
+    {/if}
+    {/exp:query}
+  </ul>
+  {embed="embeds/sponsor"}
+</aside>
+
+<main>
+  {embed="embeds/title"}
+
+  <section class="comments">
+    {exp:comment:entries sort="desc" orderby="date" limit="100" dynamic="no"}
+    <article id="{comment_id}">
+      <header><h3><a href="{path='article/{url_title}'}">{title}</a></h3></header>
+      <div>
+        <footer>
+          {if avatar}
+          <img class="avatar" src="{avatar_url}" alt="">
+          {if:else}
+          <img class="avatar" src="{anonymous-user-icon}" alt="">
+          {/if}
+          <span class="date"><span class="x">datum: </span><b>{comment_date format="%j-%n-%Y %H:%i"}</b></span>
+          <span class="author"><span class="x">auteur: </span><b><a href="{path='member/{author_id}}">{name}</a></b></span>
+          <span class="x link"><a href="{path='article/{url_title}#{comment_id}'}" title="{path='article/{url_title}#{comment_id}'}"><b>&lt;link&gt;</b></a></span>
+          {if logged_in_group_id==1}
+          <span class="x link"><b><a href="/admin.php?/cp/publish/comments/edit/{comment_id}">edit</a></b></span>
+          {/if}
+        </footer>
+        {comment}
+        <a class="calltoaction" href="{path='{channel_short_name}/{url_title}#{comment_id}'}" title="{path='article/{url_title}#{comment_id}'}"><b>Ga naar...</b></a>
+      </div>
+    </article>
+    {/exp:comment:entries}
+  </section>
+</main>

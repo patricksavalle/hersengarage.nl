@@ -1,0 +1,232 @@
+{layout="layouts/site"}
+{layout:set name='page_type'}article{/layout:set}
+{!--set image to empty to prevent error on article without image--}
+{layout:set name='og_image'}{/layout:set}
+
+<aside>
+    {embed="embeds/logo"}
+    {embed="embeds/categories"}
+</aside>
+
+<main>
+    {embed="embeds/title"}
+
+    <section class="entries">
+        {exp:channel:entries channel='{segment_1}' limit='1' require_entry="yes"}
+
+        <article class="longread">
+
+            <header>
+                <h1><a href="{path='{segment_1}/{url_title}'}">{title}</a></h1>
+            </header>
+
+            <footer>
+                {if avatar}
+                <img class="avatar" src="{avatar_url}" alt="">
+                {if:else}
+                <img class="avatar" src="{anonymous-user-icon}" alt="">
+                {/if}
+                <span class="date"><span class="x">datum: </span><b>{entry_date format='%j-%n-%Y %H:%i'}</b></span>
+                <span class="author"><span class="x">auteur: </span><b><a href="{path='member/{author_id}'}">{author}</a></b></span>
+                <span class="x count">reacties: <b><a href="{path='{segment_1}/{url_title}#comments'}">{comment_total}</a></b></span>
+                {if logged_in_group_id==1}
+                <span class="link"><b><a href="/admin.php?/cp/publish/edit/entry/{entry_id}">edit</a></b></span>
+                {/if}
+            </footer>
+
+            {blog_image limit="1"}
+            {layout:set name='og_image'}{blog_image:image}{/layout:set}
+			{layout:set name='ld_json'}<script type="application/ld+json">{
+				"@context": "https://schema.org",
+				"@type": "NewsArticle",
+				"mainEntityOfPage": {
+				"@type": "WebPage",
+				"@id": "{path='{segment_1}/{url_title}}"
+			},
+			"headline": "{seo_title}",
+			"image": ["{blog_image:image}"],
+			"datePublished": "{entry_date format='{DATE_ATOM}'}",
+			"dateModified": "{edit_date format='{DATE_ATOM}'}",
+			"author": {
+				"@type": "Person",
+				"name": "Patrick Savalle"
+			},
+			"publisher": {
+				"@type": "Organization",
+				"name": "Hersengarage.nl",
+				"logo": {
+					"@type": "ImageObject",
+					"url": "/themes/user/hersengarage/asset/img/logo.png"
+				}
+			}
+			}</script>{/layout:set}
+            <figure>
+                <img src="{blog_image:image}" alt="{blog_image:caption:attr_safe}">
+                <figcaption>{blog_image:caption:attr_safe}</figcaption>
+            </figure>
+            {/blog_image}
+
+			{exp:hash_tag:linkify segment_1="index" class="hash_tag"}{blog_content}{/exp:hash_tag:linkify}
+
+            {blog_image offset="1"}
+            <figure>
+                <img src="{blog_image:image}" alt="{blog_image:caption:attr_safe}">
+                <figcaption>{blog_image:caption:attr_safe}</figcaption>
+            </figure>
+            {/blog_image}
+
+            {if blog_video}
+            {blog_video}
+            {if blog_video:type == 'youtube'}
+            <figure class="video">
+                <iframe src="http://www.youtube.com/embed/{blog_video:id}?rel=0&controls=2&color=white&autohide=1" allowfullscreen></iframe>
+            </figure>
+            {/if}
+            {if blog_video:type == 'vimeo'}
+            <figure class="video">
+                <iframe src="//player.vimeo.com/video/{blog_video:id}?color=f0a400" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            </figure>
+            {/if}
+            {/blog_video}
+            {/if}
+
+            {if blog_audio}
+            {blog_audio}
+            {if blog_audio:type == 'soundcloud'}
+            <figure class="audio">
+                <iframe style="width: 100%; height: 166px; overflow: hidden" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/{blog_audio:id}&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+            </figure>
+            {/if}
+            {if blog_audio:type == 'bandcamp'}
+            <figure class="audio">
+                <iframe style="width: 100%; height: 120px; overflow: hidden" src="http://bandcamp.com/EmbeddedPlayer/album={blog_audio:id}/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/" seamless></iframe>
+            </figure>
+            {/if}
+            {/blog_audio}
+            {/if}
+
+            {if no_results}{redirect='404'}{/if}
+        </article>
+    </section>
+
+	<section class="socialbuttons">
+		<a href="https://www.facebook.com/sharer/sharer.php?u={path='{segment_1}/{url_title}'}" target="_blank"  title="Deel op Facebook">
+			<img src="{facebook-share-icon}" alt="Deel op Facebook">
+		</a>
+		<a href="https://twitter.com/intent/tweet?url={path='{segment_1}/{url_title}'}&text={exp:hash_tag:dehash}{seo_desc}{/exp:hash_tag:dehash}" target="_blank"  title="Deel op LinkedIn">
+			<img src="{twitter-share-icon}" alt="Deel op Twitter">
+		</a>
+		<a href="http://www.linkedin.com/shareArticle?mini=true&url={path='{segment_1}/{url_title}'}&title={seo_title}&summary={exp:hash_tag:dehash}{seo_desc}{/exp:hash_tag:dehash}" target="_blank" title="Deel op LinkedIn">
+			<img src="{linkedin-share-icon}" alt="Deel op LinkedIn">
+		</a>
+		<a href="https://api.whatsapp.com/send?text={path='{segment_1}/{url_title}'}" target="_blank" title="Deel op Whatsapp">
+			<img src="{whatsapp-share-icon}" alt="Deel op Whatsapp">
+		</a>
+
+	</section>
+
+    {layout:set name='og_title'}{seo_title}{/layout:set}
+    {layout:set name='og_url'}{path='{segment_1}/{url_title}'}{/layout:set}
+    {layout:set name='og_description'}{exp:hash_tag:dehash}{seo_desc}{/exp:hash_tag:dehash}{/layout:set}
+    {layout:set name='seo_desc'}{seo_desc}{/layout:set}
+	{layout:set name='keywords'}{exp:hash_tag:keywords}{blog_content}{/exp:hash_tag:keywords}{/layout:set}
+	{/exp:channel:entries}
+
+	<section class="articles">
+		{exp:hash_tag url_title="{segment_2}" limit="4" channel="1" field_id="1"}
+		<article class="linkdump">
+			<header>
+				<h3><a href="{path='{channel}/{url_title}'}">{title}</a></h3>
+			</header>
+			<p>
+				<span class="date"><b>{entry_date format='%j-%n-%Y'}</b></span>
+				{field_id_1}
+			</p>
+		</article>
+		{/exp:hash_tag}
+	</section>
+
+	{if comments_disabled}
+	{if:else}
+
+	<section class="comments" id="comments">
+        {exp:comment:entries channel='{segment_1}'}
+        <article id="{comment_id}">
+            <header></header>
+            <div>
+                <footer>
+                    {if avatar}
+                    <img class="avatar" src="{avatar_url}" alt="">
+                    {if:else}
+                    <img class="avatar" src="{anonymous-user-icon}" alt="">
+                    {/if}
+                    <span class="date"><span class="x">datum: </span><b>{comment_date format="%j-%n-%Y %H:%i"}</b></span>
+                    <span class="author"><span class="x">auteur: </span><b><a href="{path='member/{author_id}}">{name}</a></b></span>
+                    <span class="x link"><a href="{path='{segment_1}/{url_title}#{comment_id}'}" title="{path='{segment_1}/{url_title}#{comment_id}'}"><b>&lt;link&gt;</b></a></span>
+                    {if logged_in_group_id==1}
+                    <span class="x link"><b><a href="/admin.php?/cp/publish/comments/edit/{comment_id}">edit</a></b></span>
+                    {/if}
+                </footer>
+                {comment}
+                <a class="calltoaction" href="{path='{segment_1}/{url_title}#commentform'}" title="{path='{segment_1}/{url_title}#commentform'}"><b>Reageer...</b></a>
+                {if no_results}
+                {/if}
+            </div>
+        </article>
+        {/exp:comment:entries}
+    </section>
+
+    <section class="comments" id="commentform">
+        {if logged_out}
+            {exp:member:login_form return="{segment_1}/{segment_2}/#commentform"}
+            <fieldset>
+                {if auto_login}<label><input type="hidden" name="auto_login" value="1"/></label>{/if}
+                <label><input placeholder="Gebruikersnaam" type="text" name="username" value="" maxlength="32" size="25" ></label>
+                <label><input placeholder="Wachtwoord" type="password" name="password" value="" maxlength="32" size="25" ></label>
+                <label><input type="submit" name="submit" value="Login om te reageren"></label>
+                <label><a class="instruction" href="{path='member/register'}"> Nieuwe gebruiker?</a></label>
+                <label><a class="instruction" href="{path='member/forgot_password'}"> Wachtwoord vergeten?</a></label>
+                <label><textarea disabled placeholder="U bent niet ingelogd"></textarea></label>
+            </fieldset>
+            {/exp:member:login_form}
+        {if:else}
+            {exp:comment:form channel='{segment_1}' return='{segment_1}/{segment_2}#commentform' preview='{segment_1}/{segment_2}#commentform'}
+            {exp:comment:preview}
+            <article>
+                <header></header>
+                <footer>
+                    <img class="avatar" src="/images/avatars/{avatar_filename}" alt="">
+                    <b>Dit is de PREVIEW van je commentaar</b>
+                </footer>
+                {comment}
+            </article>
+            {/exp:comment:preview}
+            <fieldset>
+                <label class="instruction">
+                    Gebruik de volgende HTML-tags om de reactie netjes op te maken:
+                    <b>&lt;strong&gt;</b>,
+                    <b>&lt;em&gt;</b>,
+                    <b>&lt;ins&gt;</b>,
+                    <b>&lt;del&gt;</b>,
+                    <b>&lt;cite&gt;</b>,
+                    <b>&lt;blockquote&gt;</b>,
+                    <b>&lt;pre&gt;</b>,
+                    <b>&lt;mark&gt;</b>,
+                    <b>&lt;sup&gt;</b>,
+                    <b>&lt;sub&gt;</b>,
+                    <b>&lt;a href="..."&gt;...&lt;/a&gt;</b>. Plaatjes zijn onmogelijk.
+                </label>
+                <label><textarea name="comment">{comment}</textarea></label>
+                <label>
+                    <!--<input type="submit" name="preview" value="Preview">-->
+                    <input type="submit" name="submit" value="Reageer als {screen_name}">
+                </label>
+                <label><input type="hidden" name="save_info" value="yes" {save_info}></label>
+                <label class="x"><input type="checkbox" name="notify_me" value="yes" {notify_me}> Email alerts</label>
+            </fieldset>
+            {/exp:comment:form}
+        {/if}
+    </section>
+    {/if}
+
+</main>

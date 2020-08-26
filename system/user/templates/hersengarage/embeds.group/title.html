@@ -1,0 +1,28 @@
+<header id="title">
+	<a href="/">{site_name}</a>
+	<nav class="hamburger">
+    <span id="hamburger" class="dropbtn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </span>
+		<div class="dropdown-content">
+			<a href="{path='/'}">Artikelen</a>
+			<a href="{path='/forum'}">Discussie</a>
+			<a href="{path='/index'}">Trefwoorden</a>
+			<a href="{path='/article/huisregels'}">Huisregels</a>
+			<a href="{path='/article/about'}">Over</a>
+			<hr>
+			<a href="{path='member/profile'}">Dashboard</a>
+			{if logged_in_group_id==1}
+			<a href="/admin.php?/cp/settings/general">Adminstrator</a>
+			{/if}
+			<hr>
+			{if logged_in}
+			<a href="{path=logout'}">Uitloggen</a>
+			{if:else}
+			<a href="{path=member/login'}">Inloggen/registreren</a>
+			{/if}
+		</div>
+	</nav>
+</header>

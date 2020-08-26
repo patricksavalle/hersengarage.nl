@@ -1,0 +1,10 @@
+{exp:dynamic_link url="{embed:url}"}
+{if crawled}
+<blockquote><p>{description} <a class="instruction" href="{url}" target="_blank">&rarr; open link</a></p></blockquote>
+<figure>
+	<img alt="{title}" class="image" src="{image}">
+	<figcaption>{title}</figcaption>
+</figure>
+{if:else}
+{/if}
+{/exp:dynamic_link}

@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="{lang}">
+<head>
+	<link rel="stylesheet" type="text/css" href="{normalize-url}">
+	<link rel="stylesheet" type="text/css" href="{stylesheet-url}">
+</head>
+<body>
+<section class="entries">
+	{exp:dynamic_link encoded="base64" url="{segment_3}"}
+	{if crawled}
+	<article class="linkdump">
+		<footer style="margin: 0 25px;">
+			<strong>{title}</strong> {description}
+		</footer>
+		<figure style="--aspect-ratio: 1.9; margin: 0 25px;">
+			<img class="image" src="{image}" >
+		</figure>
+	</article>
+	{/if}
+	{/exp:dynamic_link}
+</section>
+</body>
+</html>

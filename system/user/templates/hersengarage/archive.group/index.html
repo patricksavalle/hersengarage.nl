@@ -1,0 +1,39 @@
+{layout="layouts/site"}
+{layout:set name='og_title'}De Hersengarage van Zapruder Inc.{/layout:set}
+{layout:set name='og_url'}{path='{segment_1}'}{/layout:set}
+{layout:set name='og_description'}Een andere kijk op de wereld en ons universum{/layout:set}
+{layout:set:append name='og_image'}{theme_user_folder_url}hersengarage/asset/img/poster-crop.jpg{/layout:set:append}
+{layout:set name='page_type'}forum{/layout:set}
+{layout:set name='seo_desc'}Een andere kijk op de wereld en ons universum{/layout:set}
+
+<aside>
+  {embed="embeds/logo"}
+  {embed="embeds/categories"}
+  <ul class="users">
+    {exp:query sql="SELECT *
+    FROM exp_members
+    ORDER BY last_activity DESC
+    LIMIT 50"}
+    {if anon}
+    <li>{last_activity format="%H:%i"} <b>&lt;anoniem&gt;</b> <img class="avatar" src="{theme_user_folder_url}hersengarage/asset/img/anonymous-user-icon-2.jpg" alt=""/></li>
+    {if:else}
+    {if avatar_filename}
+    <li>{last_activity format="%H:%i"} <b>{screen_name}</b><img class="avatar" src="/images/avatars/{avatar_filename}" alt=""/></li>
+    {if:else}
+    <li>{last_activity format="%H:%i"} <b>{screen_name}</b><img class="avatar" src="{theme_user_folder_url}hersengarage/asset/img/anonymous-user-icon-2.jpg" alt=""/></li>
+    {/if}
+    {/if}
+    {/exp:query}
+  </ul>
+  {embed="embeds/sponsor"}
+</aside>
+
+<main>
+  {embed="embeds/title"}
+
+  <section class="comments">
+
+    <iframe src="{path='embeds/embed/{exp:dynamic_link:encode url='https://hersengarage.nl/forum'}'}"></iframe>
+
+  </section>
+</main>

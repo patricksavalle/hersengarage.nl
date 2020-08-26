@@ -1,0 +1,819 @@
+/*! Responsive design by patricksavalle.com */
+
+/* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
+
+@import url(//fonts.googleapis.com/css2?family=Alegreya+SC:wght@800&family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Raleway:ital@0;1&display=swap);
+
+/*! =======================================================
+    Global theme configuration section
+    ======================================================= */
+
+:root {
+	/* signature colors, 15 year legacy ;) */
+	--zapblue: #00B0F0;
+	--zapred: #C34;
+	--interaction-color: var(--zapblue);
+	--background-color-categories: var(--zapblue);
+	--color-categories: white;
+	--border-color-divider: var(--zapblue);
+
+	/* we have 3 images to choose from (-1, -2, -3), images are repeated and fixed position */
+	--background-image: url(../img/background-image-1.png);
+
+	--color-header: var(--zapblue);
+	--background-main: white;
+	--color-main: black;
+	--color-title: #444;
+	--border-style-divider: dotted;
+	--border-width-divider: 8px;
+	--border-left-color-linkdump: #e88585;
+	--background-txt: #EBEBEB;
+	--background-dropdown: var(--zapblue);
+	--color-dropdown: white;
+	--background-dropdown-hover: #CCC;
+	--background-textarea: #EEE;
+	--border-color-img: lightgray;
+	--border-radius: 5px;
+	--font-family-article: 'Alegreya Sans', sans-serif;
+	--font-family-article-footer: Raleway, sans-serif;
+	--font-family-navigation: Raleway, sans-serif;
+	--font-family-h: 'Alegreya Sans', sans-serif;
+	--font-family-pre: Courier, serif;
+	--font-family-title: 'Alegreya SC', serif;
+
+	--font-scale-system-major-second: 1.125;
+	--font-scale-system-minor-third: 1.200;
+	--font-scale-system-major-third: 1.250;
+	--font-scale-system-perfect-fourth: 1.333;
+	--font-scale-system-augmented_fourth: 1.414;
+
+	/* font-sizes on Major Third ratios 1.25^x */
+	--font-scale-factor: var(--font-scale-system-major-third);
+	--line-height-base: 1.15;
+	--line-height-article: 1.4;
+	--font-size-base: 17px;
+	--font-size-normal: 1em;
+	--font-size-long-read: 1.15em;
+	--line-height-long-read: 1.5;
+	--font-size-large: calc(var(--font-size-normal) * var(--font-scale-factor));
+	--font-size-x-large: calc(var(--font-size-large) * var(--font-scale-factor));
+	--font-size-xx-large: calc(var(--font-size-x-large) * var(--font-scale-factor));
+	--font-size-small: calc(var(--font-size-normal) / var(--font-scale-factor));
+	--font-size-x-small: calc(var(--font-size-small) / var(--font-scale-factor));
+	--font-size-title: 40px;
+
+	/* parameterised large layout, main automatically sizes, change in small steps / trial-and-error */
+	--width-content: 890px;
+	--width-aside: 240px;
+}
+
+/*! =======================================================
+    END
+    ======================================================= */
+
+/* resize responsive elements that need to have fixed aspect-ratio, set the variable to the enclosing element */
+[style*="--aspect-ratio"] > :first-child {
+	width: 100%;
+}
+
+[style*="--aspect-ratio"] > img {
+	height: auto;
+}
+
+@supports (--custom:property) {
+	[style*="--aspect-ratio"] {
+		position: relative;
+	}
+
+	[style*="--aspect-ratio"]::before {
+		content: "";
+		display: block;
+		padding-bottom: calc(100% / (var(--aspect-ratio)));
+	}
+
+	[style*="--aspect-ratio"] > :first-child {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+	}
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+::-moz-selection {
+	background: #b3d4fc;
+	text-shadow: none;
+}
+
+::selection {
+	background: #b3d4fc;
+	text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #ccc;
+	margin: 0.6em 0;
+	padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+	border: 0;
+	vertical-align: middle;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+textarea {
+	resize: vertical;
+}
+
+blockquote::before {
+	content: "...";
+}
+
+blockquote::After {
+	content: "...";
+}
+
+input, textarea {
+	border-width: 1px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/* ==========================================================================
+   Background image
+   ========================================================================== */
+
+body > div {
+	background-attachment: fixed;
+	background-image: var(--background-image);
+}
+
+aside .reactions li,
+article {
+	background-color: white;
+}
+
+/* ==========================================================================
+   Base styles:
+   ========================================================================== */
+
+html {
+	color: var(--color-main);
+	font-size: var(--font-size-base);
+	line-height: var(--line-height-base);
+	font-family: Raleway, sans-serif;
+}
+
+h1 {
+	font-family: var(--font-family-h);
+	font-size: var(--font-size-x-large);
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 700;
+}
+
+h3 {
+	font-family: var(--font-family-h);
+	font-size: var(--font-size-large);
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 700;
+}
+
+p, textarea, fieldset {
+	font-family: var(--font-family-article);
+	font-size: var(--font-size-normal);
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+}
+
+p {
+	margin: 0.6em 0;
+}
+
+blockquote {
+	font-family: var(--font-family-article);
+	font-size: var(--font-size-normal);
+	font-style: italic;
+	font-variant: normal;
+	font-weight: 500;
+}
+
+pre {
+	font-family: var(--font-family-pre);
+	font-size: var(--font-size-normal);
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+}
+
+nav.hamburger {
+	margin-top: 10px;
+	float: right;
+}
+
+a {
+	text-decoration: none;
+	color: var(--color-main);
+}
+
+h1 > a,
+h3 > a {
+	color: var(--color-title);
+}
+
+label {
+	display: block;
+	font-size: var(--font-size-normal);
+}
+
+figure {
+	padding: 0;
+	margin: 0;
+}
+
+aside ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	line-height: 1.4;
+}
+
+aside ul li {
+	font-size: var(--font-size-small);
+}
+
+#title {
+	font-family: var(--font-family-title);
+	font-size: var(--font-size-title);
+	margin-bottom: 20px;
+}
+
+#title > a {
+	color: var(--color-header);
+	text-transform: uppercase;
+}
+
+.sponsor {
+	margin-top: 25px;
+	margin-right: 10px;
+	float: right;
+}
+
+.logo img {
+	width: 140px;
+	margin-top: 5px;
+	margin-bottom: 30px;
+	float: right;
+	clear: both;
+}
+
+body > div {
+	max-width: var(--width-content);
+	margin: 20px auto 50px auto;
+	overflow: auto;
+}
+
+body > footer {
+	font-family: arial, serif;
+	text-align: center;
+	font-size: small;
+	font-weight: bold;
+	font-variant: all-small-caps;
+	margin-bottom: 10px;
+	color: var(--zapblue);
+}
+
+#page-type-article aside,
+#page-type-linkdump aside {
+	position: fixed;
+}
+
+aside {
+	width: var(--width-aside);
+	float: left;
+	margin-right: 20px;
+}
+
+aside #categories {
+	clear: both;
+}
+
+aside #categories li {
+	text-align: right;
+	margin-bottom: 5px;
+}
+
+aside #categories li a {
+	font-size: var(--font-size-large);
+	text-transform: uppercase;
+	font-weight: bold;
+	background-color: var(--background-color-categories);
+	color: var(--color-categories);
+	border-radius: var(--border-radius);
+	padding-right: 5px;
+	padding-left: 5px;
+}
+
+aside .stats,
+aside .users,
+aside .reactions {
+	margin-top: 30px;
+}
+
+aside .reactions {
+	text-align: justify;
+}
+
+img.avatar {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	margin: 5px;
+}
+
+aside .stats,
+aside .users {
+	text-align: right;
+}
+
+aside .users li img {
+	margin: 0 0 5px 5px;
+}
+
+aside .reactions li {
+	margin-bottom: 13px;
+	overflow: hidden;
+}
+
+aside .reactions li a {
+	/*    color: #00B0F0; */
+	color: var(--color-main);
+}
+
+main {
+	width: calc(var(--width-content) - var(--width-aside) - 45px - 8px);
+	border-left: var(--border-width-divider) var(--border-style-divider) var(--border-color-divider);
+	padding-left: 25px;
+	font-style: normal;
+	float: right;
+	min-height: 600px;
+}
+
+main #index {
+	margin: 50px;
+}
+
+article .blurb {
+	text-align: justify;
+}
+
+article {
+	overflow: hidden;
+	line-height: var(--line-height-article);
+	margin-bottom: 20px;
+}
+
+article.linkdump {
+	border-left: 6px dotted var(--zapred);
+	padding-left: 20px;
+}
+
+#page-type-home article.linkdump p {
+	margin: 0;
+}
+
+article.longread {
+	font-size: var(--font-size-long-read);
+	line-height: var(--line-height-long-read);
+}
+
+article p a {
+	text-decoration: underline;
+	text-decoration-color: var(--zapblue);
+	text-decoration-thickness: .1414em;
+	text-underline-offset: 1px;
+}
+
+article > p {
+	overflow: hidden;
+}
+
+article header h1,
+article header h3 {
+	margin: 0 0 5px 0;
+	text-align: left;
+}
+
+article footer {
+	background-color: var(--background-txt);
+	font-size: var(--font-size-small);
+	font-family: var(--font-family-article-footer);
+	border-radius: var(--border-radius);
+}
+
+article footer span {
+	margin-left: 5px;
+}
+
+article footer .link {
+	float: right;
+}
+
+figcaption {
+	font-size: var(--font-size-x-small);
+	font-weight: bolder;
+	text-align: center;
+	margin: 10px 0 20px 0;
+	font-style: italic;
+}
+
+article figure .thumb {
+	margin-top: 17px;
+	margin-left: 10px;
+	float: right;
+	overflow: hidden;
+	width: 270px;
+	height: 174px;
+}
+
+article img {
+	width: 100%;
+	border: 1px solid var(--border-color-img);
+}
+
+article figure.video iframe {
+	width:100%;
+	height: 335px;
+}
+
+article iframe.pdf {
+	width: 100%;
+	height: 450px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+main .archive {
+	margin: 0 25px;
+}
+
+main .archive h1 {
+	font-size: var(--font-size-large);
+}
+
+main .socialbuttons,
+main .comments {
+	margin: 0 25px 25px 25px;
+}
+
+.comment p {
+	font-size: var(--font-size-small);
+	font-weight: 400;
+}
+
+.comments article header h3 {
+	margin: 0;
+}
+
+.card h3 {
+	margin: 0;
+}
+
+.card,
+.comments article > div {
+	border-radius: var(--border-radius);
+	background-color: var(--background-txt);
+	padding: 5px 10px 5px 10px;
+	overflow-x: scroll;
+}
+
+article .calltoaction {
+	color: var(--interaction-color);
+	font-size: var(--font-size-small);
+	display: block;
+	text-align: right;
+}
+
+.instruction {
+	font-size: var(--font-size-normal);
+	color: var(--interaction-color);
+}
+
+/* highlight a targeted article for 4s */
+article:target {
+	border: 2px solid var(--interaction-color);
+	border-radius: var(--border-radius);
+	animation: css 0s 4s forwards;
+}
+
+@keyframes css {
+	to {
+		border: none;
+	}
+}
+
+main #commentform textarea {
+	width: 100%;
+	min-height: 250px;
+	border-color: var(--interaction-color);
+	border-radius: var(--border-radius);
+	border-width: 3px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	background-color: var(--background-textarea);
+}
+
+main #commentform label {
+	margin: 10px 0;
+}
+
+#hamburger {
+	z-index: 1;
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+#hamburger span {
+	display: block;
+	width: 33px;
+	height: 4px;
+	margin-bottom: 5px;
+	background: var(--interaction-color);
+	border-radius: 3px;
+	z-index: 1;
+}
+
+.hamburger {
+	position: relative;
+}
+
+.hamburger .dropdown-content {
+	display: none;
+	border-radius: var(--border-radius);
+	position: absolute;
+	left: -180px;
+	background-color: var(--background-dropdown);
+	font-family: var(--font-family-navigation);
+	width: 205px;
+	overflow: hidden;
+	z-index: 1;
+	font-size: 16px;
+	line-height: 1.2;
+	text-align: right;
+}
+
+.dropdown-content a {
+	padding: 12px 16px;
+	text-decoration: none;
+	color: var(--color-dropdown);
+	display: block;
+}
+
+.dropdown-content a:hover {
+	background-color: var(--background-dropdown-hover);
+}
+
+.hamburger:hover .dropdown-content {
+	/* make visible on hover */
+	display: block;
+}
+
+@media only screen and (min-width: 900px ) {
+
+}
+
+@media only screen and (max-width: 900px) {
+	#hamburger {
+		z-index: 1;
+		-webkit-user-select: none;
+		user-select: none;
+	}
+
+	#hamburger span {
+		display: block;
+		width: 33px;
+		height: 4px;
+		margin-bottom: 5px;
+		background: var(--interaction-color);
+		border-radius: 3px;
+		z-index: 1;
+	}
+
+	.dropdown {
+		position: relative;
+		display: inline-block;
+	}
+
+	main .dropdown-content {
+		display: none;
+		border-radius: var(--border-radius);
+		position: absolute;
+		left: -150px;
+		background-color: var(--background-dropdown);
+		font-family: var(--font-family-navigation);
+		min-width: 175px;
+		z-index: 1;
+		font-size: 16px;
+		line-height: 1.2;
+	}
+
+	.dropdown-content a {
+		padding: 12px 16px;
+		text-decoration: none;
+		display: block;
+	}
+
+	.dropdown-content a:hover {
+		background-color: var(--background-dropdown-hover);
+	}
+
+	.dropdown:hover .dropdown-content {
+		display: block;
+	}
+}
+
+@media only screen and (max-width: 900px ) and (min-width: 660px ) {
+
+	body > div {
+		--width-content: calc(590px + 8px + 8px + 25px + 25px);
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	aside {
+		display: none;
+	}
+
+	main {
+		float: none;
+		width: 590px;
+		border-right: 8px var(--border-style-divider) var(--border-color-divider);
+		padding-right: 25px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+@media only screen and (max-width: 660px ) and (min-width: 605px ) {
+
+	body > div {
+		--width-content: calc(590px + 5px + 5px);
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	aside {
+		display: none;
+	}
+
+	main {
+		float: none;
+		width: 590px;
+		border: 0;
+		padding-left: 5px;
+		padding-right: 5px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+@media only screen and (max-width: 605px ) {
+
+	:root {
+		/* font-sizes on Major Third ratios 1.25^x */
+		--font-scale-factor: var(--font-scale-system-major-second);
+		--line-height-base: 1.15;
+		--line-height-article: 1.25;
+		--font-size-base: 17px;
+		--font-size-normal: 1em;
+		--font-size-large: calc(var(--font-size-normal) * var(--font-scale-factor));
+		--font-size-x-large: calc(var(--font-size-large) * var(--font-scale-factor));
+		--font-size-xx-large: calc(var(--font-size-x-large) * var(--font-scale-factor));
+		--font-size-small: calc(var(--font-size-normal) / var(--font-scale-factor));
+		--font-size-x-small: calc(var(--font-size-small) / var(--font-scale-factor));
+		--font-size-title: 25px;
+	}
+
+	html {
+		line-height: var(--line-height-base);
+		font-size: var(--font-size-base);
+	}
+
+	body > div {
+		--width-content: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 0 10px;
+		min-width: 330px
+	}
+
+	nav.hamburger {
+		margin-top: 5px;
+	}
+
+	#title {
+		font-size: var(--font-size-title);
+	}
+
+	aside,
+	body > footer {
+		display: none;
+	}
+
+	main {
+		float: none;
+		width: 100%;
+		border: 0;
+		padding: 0;
+	}
+
+	main h1 {
+		font-size: var(--font-size-x-large);
+	}
+
+	main h3 {
+		font-size: var(--font-size-large);
+	}
+
+	article {
+		line-height: var(--line-height-article);
+	}
+
+	article figure .thumb {
+		margin: 10px 0 0 0;
+		width: 100%;
+		height: 100%;
+		max-height: 400px;
+	}
+
+	article > p {
+		overflow: hidden;
+		float: left;
+	}
+
+	article footer {
+		font-size: var(--font-size-x-small);
+	}
+
+	.x {
+		display: none;
+	}
+
+	main .socialbuttons,
+	main .comments {
+		margin: 15px;
+	}
+
+	input {
+		width: 100%;
+	}
+}
+

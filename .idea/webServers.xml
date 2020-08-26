@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="a1fae91f-3fb1-4a55-b865-48d1e7d57713" name="srv.hersengarage.nl" url="https://hersengarage.nl">
+        <fileTransfer rootFolder="/var/www/html/hersengarage.nl" accessType="SFTP" host="hersengarage.nl" port="22" sshConfigId="f79969ef-357b-4944-96b3-a43d9bc9a5ec" sshConfig="root@hersengarage.nl:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
