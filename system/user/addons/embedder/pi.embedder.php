@@ -23,8 +23,8 @@ class Embedder {
 
 		// else assume image
 		$str = preg_replace(
-			"/\[\[(https?:\/\/.+)\]\]/",
-			"<img src='$1'>",
+			"/\[\[(https?:\/\/[^ ]+) ?(.*)\]\]/",
+			"<figure><img src='$1'></figure><figcaption>$2</figcaption>",
 			$str);
 
 		$this->return_data = $str;
