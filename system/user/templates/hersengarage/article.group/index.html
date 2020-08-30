@@ -78,19 +78,13 @@
             {if blog_video}
             {blog_video}
             {if blog_video:type == 'youtube'}
-            <figure class="video">
-                <iframe src="//www.youtube.com/embed/{blog_video:id}" allowfullscreen></iframe>
-            </figure>
+			<iframe class="video youtube" src="//www.youtube.com/embed/{blog_video:id}" allowfullscreen></iframe>
             {/if}
             {if blog_video:type == 'vimeo'}
-            <figure class="video">
-                <iframe src="//player.vimeo.com/video/{blog_video:id}" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-            </figure>
+			<iframe class="video vimeo" src="//player.vimeo.com/video/{blog_video:id}" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             {/if}
 			{if blog_video:type == 'bitchute'}
-			<figure class="video">
-				<iframe src="//www.bitchute.com/embed/{blog_video:id}/"></iframe>
-			</figure>
+			<iframe class="video bitchute" src="//www.bitchute.com/embed/{blog_video:id}/"></iframe>
 			{/if}
             {/blog_video}
             {/if}
@@ -98,14 +92,10 @@
             {if blog_audio}
             {blog_audio}
             {if blog_audio:type == 'soundcloud'}
-            <figure class="audio">
-                <iframe style="width: 100%; height: 166px; overflow: hidden" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/{blog_audio:id}&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
-            </figure>
+			<iframe class="audio soundcloud" src="//w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/{blog_audio:id}&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
             {/if}
             {if blog_audio:type == 'bandcamp'}
-            <figure class="audio">
-                <iframe style="width: 100%; height: 120px; overflow: hidden" src="http://bandcamp.com/EmbeddedPlayer/album={blog_audio:id}/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/" seamless></iframe>
-            </figure>
+			<iframe class="audio bandcamp" src="//bandcamp.com/EmbeddedPlayer/album={blog_audio:id}/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/" seamless></iframe>
             {/if}
             {/blog_audio}
             {/if}
@@ -115,16 +105,16 @@
     </section>
 
 	<section class="socialbuttons">
-		<a href="https://www.facebook.com/sharer/sharer.php?u={path='{segment_1}/{url_title}'}" target="_blank"  title="Deel op Facebook">
+		<a href="//www.facebook.com/sharer/sharer.php?u={path='{segment_1}/{url_title}'}" target="_blank"  title="Deel op Facebook">
 			<img src="{facebook-share-icon}" alt="Deel op Facebook">
 		</a>
-		<a href="https://twitter.com/intent/tweet?url={path='{segment_1}/{url_title}'}&text={exp:hash_tag:dehash}{seo_desc}{/exp:hash_tag:dehash}" target="_blank"  title="Deel op LinkedIn">
+		<a href="//twitter.com/intent/tweet?url={path='{segment_1}/{url_title}'}&text={exp:hash_tag:dehash}{seo_desc}{/exp:hash_tag:dehash}" target="_blank"  title="Deel op LinkedIn">
 			<img src="{twitter-share-icon}" alt="Deel op Twitter">
 		</a>
-		<a href="http://www.linkedin.com/shareArticle?mini=true&url={path='{segment_1}/{url_title}'}&title={seo_title}&summary={exp:hash_tag:dehash}{seo_desc}{/exp:hash_tag:dehash}" target="_blank" title="Deel op LinkedIn">
+		<a href="//www.linkedin.com/shareArticle?mini=true&url={path='{segment_1}/{url_title}'}&title={seo_title}&summary={exp:hash_tag:dehash}{seo_desc}{/exp:hash_tag:dehash}" target="_blank" title="Deel op LinkedIn">
 			<img src="{linkedin-share-icon}" alt="Deel op LinkedIn">
 		</a>
-		<a href="https://api.whatsapp.com/send?text={path='{segment_1}/{url_title}'}" target="_blank" title="Deel op Whatsapp">
+		<a href="//api.whatsapp.com/send?text={path='{segment_1}/{url_title}'}" target="_blank" title="Deel op Whatsapp">
 			<img src="{whatsapp-share-icon}" alt="Deel op Whatsapp">
 		</a>
 
