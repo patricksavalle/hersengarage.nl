@@ -13,7 +13,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07d6c33b-1a82-4223-9e57-852637f1cb6d" name="Default Changelist" comment="Updates" />
+    <list default="true" id="07d6c33b-1a82-4223-9e57-852637f1cb6d" name="Default Changelist" comment="Updates">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/user/templates/hersengarage/article.group/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/system/user/templates/hersengarage/article.group/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,6 +34,9 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/system/user/templates/hersengarage/article.group/index.html" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1fSZ6yOu4dWiEPBrGR8x83YAiLD" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -50,20 +57,20 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JSON" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Documents and Settings" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\expressionengine\themes\user\hersengarage\asset\img" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\expressionengine\themes\user" />
       <recent name="C:\xampp\htdocs\expressionengine\system\user\addons\activity_stream" />
       <recent name="C:\xampp\htdocs\expressionengine\system\user\addons" />
       <recent name="C:\xampp\htdocs\expressionengine\system\user\addons\hash_tag" />
       <recent name="C:\xampp\htdocs\expressionengine\system\user\templates\hersengarage\embeds.group" />
-      <recent name="C:\xampp\htdocs\expressionengine\system\user\templates\hersengarage" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\expressionengine\themes\user\hersengarage\asset\img" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -89,7 +96,8 @@
       <workItem from="1598436285659" duration="333000" />
       <workItem from="1598436637511" duration="41000" />
       <workItem from="1598436716466" duration="291000" />
-      <workItem from="1598437026023" duration="12000" />
+      <workItem from="1598437026023" duration="7434000" />
+      <workItem from="1598529628526" duration="6821000" />
     </task>
     <task id="LOCAL-00001" summary="Remove index.php">
       <created>1596217664542</created>
@@ -239,6 +247,10 @@
     </state>
     <state x="609" y="113" key="#Deployment/0.0.1707.960@0.0.1707.960" timestamp="1596390665583" />
     <state x="914" y="303" key="#Deployment/0.0.2560.1440@0.0.2560.1440" timestamp="1596219125647" />
+    <state x="477" y="143" key="#Inspections" timestamp="1598615797900">
+      <screen x="0" y="0" width="1707" height="960" />
+    </state>
+    <state x="477" y="143" key="#Inspections/0.0.1707.960@0.0.1707.960" timestamp="1598615797900" />
     <state x="247" y="512" width="758" height="725" key="#Options" timestamp="1596228047514">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
@@ -264,15 +276,15 @@
     </state>
     <state x="152" y="100" width="1476" height="760" key="DiffContextDialog/0.0.1707.960@0.0.1707.960" timestamp="1597153305413" />
     <state x="228" y="150" width="2214" height="1140" key="DiffContextDialog/0.0.2560.1440@0.0.2560.1440" timestamp="1598351424563" />
-    <state x="679" y="123" width="1475" height="1031" maximized="true" key="DirDiffDialog" timestamp="1598436621391">
+    <state x="679" y="123" width="1475" height="1031" maximized="true" key="DirDiffDialog" timestamp="1598438780868">
       <screen x="0" y="0" width="1707" height="960" />
     </state>
-    <state x="412" y="188" width="980" height="688" maximized="true" key="DirDiffDialog/0.0.1707.960@0.0.1707.960" timestamp="1598436621391" />
+    <state x="412" y="188" width="980" height="688" maximized="true" key="DirDiffDialog/0.0.1707.960@0.0.1707.960" timestamp="1598438780868" />
     <state x="679" y="123" width="1475" height="1031" key="DirDiffDialog/0.0.2560.1440@0.0.2560.1440" timestamp="1598352062832" />
-    <state x="787" y="181" key="FileChooserDialogImpl" timestamp="1598435805988">
+    <state x="787" y="181" key="FileChooserDialogImpl" timestamp="1598533904580">
       <screen x="0" y="0" width="1707" height="960" />
     </state>
-    <state x="787" y="181" key="FileChooserDialogImpl/0.0.1707.960@0.0.1707.960" timestamp="1598435805988" />
+    <state x="787" y="181" key="FileChooserDialogImpl/0.0.1707.960@0.0.1707.960" timestamp="1598533904580" />
     <state x="1181" y="272" key="FileChooserDialogImpl/0.0.2560.1440@0.0.2560.1440" timestamp="1596214269282" />
     <state x="695" y="353" key="Github.ShareDialog" timestamp="1598436821697">
       <screen x="0" y="0" width="1707" height="960" />
@@ -282,10 +294,10 @@
       <screen x="0" y="0" width="1707" height="960" />
     </state>
     <state x="688" y="395" key="NewPhpFileDialog/0.0.1707.960@0.0.1707.960" timestamp="1596213562524" />
-    <state x="494" y="79" key="SettingsEditor" timestamp="1598437037132">
+    <state x="494" y="79" key="SettingsEditor" timestamp="1598615776551">
       <screen x="0" y="0" width="1707" height="960" />
     </state>
-    <state x="494" y="79" key="SettingsEditor/0.0.1707.960@0.0.1707.960" timestamp="1598437037132" />
+    <state x="494" y="79" key="SettingsEditor/0.0.1707.960@0.0.1707.960" timestamp="1598615776551" />
     <state x="814" y="286" key="SettingsEditor/0.0.2560.1440@0.0.2560.1440" timestamp="1596218956248" />
     <state x="744" y="376" key="VCS.EditChangelistDialog" timestamp="1596382740999">
       <screen x="0" y="0" width="1707" height="960" />
@@ -296,10 +308,10 @@
     </state>
     <state x="609" y="264" key="Vcs.Push.Dialog.v2/0.0.1707.960@0.0.1707.960" timestamp="1598436451507" />
     <state x="914" y="396" key="Vcs.Push.Dialog.v2/0.0.2560.1440@0.0.2560.1440" timestamp="1598351369196" />
-    <state x="427" y="161" key="VcsDiffUtil.ChangesDialog" timestamp="1598436428091">
+    <state x="427" y="161" key="VcsDiffUtil.ChangesDialog" timestamp="1598437383922">
       <screen x="0" y="0" width="1707" height="960" />
     </state>
-    <state x="427" y="161" key="VcsDiffUtil.ChangesDialog/0.0.1707.960@0.0.1707.960" timestamp="1598436428091" />
+    <state x="427" y="161" key="VcsDiffUtil.ChangesDialog/0.0.1707.960@0.0.1707.960" timestamp="1598437383922" />
     <state x="640" y="242" key="VcsDiffUtil.ChangesDialog/0.0.2560.1440@0.0.2560.1440" timestamp="1598351157100" />
     <state x="533" y="148" width="713" height="736" key="find.popup" timestamp="1598200150842">
       <screen x="0" y="0" width="1707" height="960" />

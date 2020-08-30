@@ -12,7 +12,7 @@
     {embed="embeds/title"}
 
     <section class="entries">
-        {exp:channel:entries channel='{segment_1}' limit='1' require_entry="yes"}
+        {exp:channel:entries channel='{segment_1}' limit='1' require_entry="yes" status="draft|open"}
 
         <article class="longread">
 
@@ -79,14 +79,19 @@
             {blog_video}
             {if blog_video:type == 'youtube'}
             <figure class="video">
-                <iframe src="http://www.youtube.com/embed/{blog_video:id}?rel=0&controls=2&color=white&autohide=1" allowfullscreen></iframe>
+                <iframe src="//www.youtube.com/embed/{blog_video:id}" allowfullscreen></iframe>
             </figure>
             {/if}
             {if blog_video:type == 'vimeo'}
             <figure class="video">
-                <iframe src="//player.vimeo.com/video/{blog_video:id}?color=f0a400" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                <iframe src="//player.vimeo.com/video/{blog_video:id}" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             </figure>
             {/if}
+			{if blog_video:type == 'bitchute'}
+			<figure class="video">
+				<iframe src="//www.bitchute.com/embed/{blog_video:id}/"></iframe>
+			</figure>
+			{/if}
             {/blog_video}
             {/if}
 
