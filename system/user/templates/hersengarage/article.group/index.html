@@ -66,7 +66,9 @@
             </figure>
             {/blog_image}
 
+			{exp:embedder}
 			{exp:hash_tag:linkify segment_1="index" class="hash_tag"}{blog_content}{/exp:hash_tag:linkify}
+			{/exp:embedder}
 
             {blog_image offset="1"}
             <figure>
@@ -162,7 +164,7 @@
                     <span class="x link"><b><a href="/admin.php?/cp/publish/comments/edit/{comment_id}">edit</a></b></span>
                     {/if}
                 </footer>
-                {comment}
+				{exp:embedder}{comment}{/exp:embedder}
                 <a class="calltoaction" href="{path='{segment_1}/{url_title}#commentform'}" title="{path='{segment_1}/{url_title}#commentform'}"><b>Reageer...</b></a>
                 {if no_results}
                 {/if}
