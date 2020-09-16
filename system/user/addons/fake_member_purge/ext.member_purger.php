@@ -29,7 +29,7 @@ class Ext_member_purger
 	function purge_members(string $tag)
 	{
 		$sql = "UPDATE exp_members
-			SET group_id = (select group_id FROm exp_member_groups WHERE group_title='Banned')
+			SET group_id = (select group_id FROM exp_member_groups WHERE group_title='Banned')
 			WHERE
 			(FROM_UNIXTIME(join_date) < DATE_SUB(CURRENT_TIMESTAMP, INTERVAL 1 WEEK) AND last_visit=last_activity)
             AND total_comments=0 AND total_entries=0";

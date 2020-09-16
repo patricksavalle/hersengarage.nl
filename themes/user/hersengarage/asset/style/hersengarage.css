@@ -415,6 +415,7 @@ article {
 	overflow: hidden;
 	line-height: var(--line-height-article);
 	margin-bottom: 20px;
+	font-family: var(--font-family-article);
 }
 
 article.linkdump {
@@ -485,7 +486,8 @@ article img {
 	border: 1px solid var(--border-color-img);
 }
 
-article .video {
+article .video,
+article .eb_video {
 	width:100%;
 	height: 335px;
 }

@@ -129,8 +129,9 @@
 	{layout:set name='keywords'}{exp:hash_tag:keywords}{blog_content}{/exp:hash_tag:keywords}{/layout:set}
 	{/exp:channel:entries}
 
+	{exp:hash_tag url_title="{segment_2}" limit="4" channel="1" field_id="1"}
+	{if !no_results}
 	<section class="articles">
-		{exp:hash_tag url_title="{segment_2}" limit="4" channel="1" field_id="1"}
 		<article class="linkdump">
 			<header>
 				<h3><a href="{path='{channel}/{url_title}'}">{title}</a></h3>
@@ -140,8 +141,9 @@
 				{field_id_1}
 			</p>
 		</article>
-		{/exp:hash_tag}
 	</section>
+	{/if}
+	{/exp:hash_tag}
 
 	{if comments_disabled}
 	{if:else}
