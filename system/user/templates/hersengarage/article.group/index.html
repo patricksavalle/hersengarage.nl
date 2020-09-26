@@ -43,7 +43,7 @@
 				"@type": "WebPage",
 				"@id": "{path='{segment_1}/{url_title}}"
 			},
-			"headline": "{seo_title}",
+			"headline": "{title}",
 			"image": ["{blog_image:image}"],
 			"datePublished": "{entry_date format='{DATE_ATOM}'}",
 			"dateModified": "{edit_date format='{DATE_ATOM}'}",
@@ -113,7 +113,7 @@
 		<a href="//twitter.com/intent/tweet?url={path='{segment_1}/{url_title}'}&text={exp:hash_tag:dehash}{seo_desc}{/exp:hash_tag:dehash}" target="_blank"  title="Deel op LinkedIn">
 			<img src="{twitter-share-icon}" alt="Deel op Twitter">
 		</a>
-		<a href="//www.linkedin.com/shareArticle?mini=true&url={path='{segment_1}/{url_title}'}&title={seo_title}&summary={exp:hash_tag:dehash}{seo_desc}{/exp:hash_tag:dehash}" target="_blank" title="Deel op LinkedIn">
+		<a href="//www.linkedin.com/shareArticle?mini=true&url={path='{segment_1}/{url_title}'}&title={title}&summary={exp:hash_tag:dehash}{seo_desc}{/exp:hash_tag:dehash}" target="_blank" title="Deel op LinkedIn">
 			<img src="{linkedin-share-icon}" alt="Deel op LinkedIn">
 		</a>
 		<a href="//api.whatsapp.com/send?text={path='{segment_1}/{url_title}'}" target="_blank" title="Deel op Whatsapp">
@@ -122,7 +122,7 @@
 
 	</section>
 
-    {layout:set name='og_title'}{seo_title}{/layout:set}
+    {layout:set name='og_title'}{title}{/layout:set}
     {layout:set name='og_url'}{path='{segment_1}/{url_title}'}{/layout:set}
     {layout:set name='og_description'}{exp:hash_tag:dehash}{seo_desc}{/exp:hash_tag:dehash}{/layout:set}
     {layout:set name='seo_desc'}{seo_desc}{/layout:set}
