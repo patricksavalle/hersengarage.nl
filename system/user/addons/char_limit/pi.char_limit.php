@@ -83,5 +83,5 @@ class Char_limit {
 }
 // END CLASS
 
-/* End of file pi.embedder.php */
-/* Location: ./system/user/addons/char_limit/pi.embedder.php */
+/* End of file pi.char_limit.php */
+/* Location: ./system/user/addons/char_limit/pi.char_limit.php */

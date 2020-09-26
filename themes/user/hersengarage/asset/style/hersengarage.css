@@ -40,6 +40,7 @@
 	--font-family-h: 'Alegreya Sans', sans-serif;
 	--font-family-pre: Courier, serif;
 	--font-family-title: 'Alegreya SC', serif;
+	--font-weight-title: 400;
 
 	--font-scale-system-major-second: 1.125;
 	--font-scale-system-minor-third: 1.200;
@@ -289,6 +290,7 @@ aside ul li {
 #title {
 	font-family: var(--font-family-title);
 	font-size: var(--font-size-title);
+	font-weight: var(--font-weight-title);
 	margin-bottom: 20px;
 }
 
@@ -338,16 +340,16 @@ aside {
 	margin-right: 20px;
 }
 
-aside #categories {
+aside .categories {
 	clear: both;
 }
 
-aside #categories li {
+aside .categories li {
 	text-align: right;
 	margin-bottom: 5px;
 }
 
-aside #categories li a {
+aside .categories li a {
 	font-size: var(--font-size-large);
 	text-transform: uppercase;
 	font-weight: bold;

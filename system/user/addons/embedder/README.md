@@ -3,13 +3,14 @@
 Inserts embed-code for links wrapped in [[...]]. Just place a video-URL between two brackets and
 this plugin will create the embed-code. 
 
-Supports Youtube and Bitchute, anything else between brackets is considered an image-url
+Supports Youtube and Bitchute, *anything else* between brackets is considered an image-url
 
 If your template looks like:
 
     {exp:embedder}{blog_content}{/exp:embedder}
+    {exp:embedder}{comment}{/exp:embedder}
 
-This content will be transformed into appropriate HTML-code:
+then this content will be transformed into appropriate HTML-code:
 
     [[https://hersengarage.nl/images/uploads/hersengarage/EePZ_SCUEAAjVBe.jpg Alt text]]
 
