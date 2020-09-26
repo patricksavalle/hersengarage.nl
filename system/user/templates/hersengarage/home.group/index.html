@@ -40,7 +40,7 @@
 			</header>
 			<p>
 				<span class="date"><b>{entry_date format='%j-%n-%Y'}</b></span>
-				{seo_desc}
+				{exp:char_limit total='240' strip_tags='yes'}{exp:hash_tag:dehash}{blog_content}{/exp:hash_tag:dehash}{/exp:char_limit}
 			</p>
 			{/if}
 

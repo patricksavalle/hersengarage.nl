@@ -110,10 +110,10 @@
 		<a href="//www.facebook.com/sharer/sharer.php?u={path='{segment_1}/{url_title}'}" target="_blank"  title="Deel op Facebook">
 			<img src="{facebook-share-icon}" alt="Deel op Facebook">
 		</a>
-		<a href="//twitter.com/intent/tweet?url={path='{segment_1}/{url_title}'}&text={exp:hash_tag:dehash}{seo_desc}{/exp:hash_tag:dehash}" target="_blank"  title="Deel op LinkedIn">
+		<a href="//twitter.com/intent/tweet?url={path='{segment_1}/{url_title}'}&text={exp:char_limit total='240' strip_tags='yes'}{exp:hash_tag:dehash}{blog_content}{/exp:hash_tag:dehash}{/exp:char_limit}" target="_blank"  title="Deel op LinkedIn">
 			<img src="{twitter-share-icon}" alt="Deel op Twitter">
 		</a>
-		<a href="//www.linkedin.com/shareArticle?mini=true&url={path='{segment_1}/{url_title}'}&title={title}&summary={exp:hash_tag:dehash}{seo_desc}{/exp:hash_tag:dehash}" target="_blank" title="Deel op LinkedIn">
+		<a href="//www.linkedin.com/shareArticle?mini=true&url={path='{segment_1}/{url_title}'}&title={title}&summary={exp:char_limit total='240' strip_tags='yes'}{exp:hash_tag:dehash}{blog_content}{/exp:hash_tag:dehash}{/exp:char_limit}" target="_blank" title="Deel op LinkedIn">
 			<img src="{linkedin-share-icon}" alt="Deel op LinkedIn">
 		</a>
 		<a href="//api.whatsapp.com/send?text={path='{segment_1}/{url_title}'}" target="_blank" title="Deel op Whatsapp">
@@ -124,8 +124,8 @@
 
     {layout:set name='og_title'}{title}{/layout:set}
     {layout:set name='og_url'}{path='{segment_1}/{url_title}'}{/layout:set}
-    {layout:set name='og_description'}{exp:hash_tag:dehash}{seo_desc}{/exp:hash_tag:dehash}{/layout:set}
-    {layout:set name='seo_desc'}{seo_desc}{/layout:set}
+    {layout:set name='og_description'}{exp:char_limit total='240' strip_tags='yes'}{exp:hash_tag:dehash}{blog_content}{/exp:hash_tag:dehash}{/exp:char_limit}{/layout:set}
+    {layout:set name='seo_desc'}{exp:char_limit total='240' strip_tags='yes'}{exp:hash_tag:dehash}{blog_content}{/exp:hash_tag:dehash}{/exp:char_limit}{/layout:set}
 	{layout:set name='keywords'}{exp:hash_tag:keywords}{blog_content}{/exp:hash_tag:keywords}{/layout:set}
 	{/exp:channel:entries}
 
