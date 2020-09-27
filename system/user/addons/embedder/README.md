@@ -12,59 +12,33 @@ If your template looks like:
 
 then this content will be transformed into appropriate HTML-code:
 
-    [[https://hersengarage.nl/images/uploads/hersengarage/EePZ_SCUEAAjVBe.jpg Alt text]]
+    [[https://hersengarage.nl/images/uploads/hersengarage/EePZ_SCUEAAjVBe.jpg Caption text]]
 
     [[https://www.bitchute.com/video/8K7_B8kd4Y4/]]
 
 Generated HTML:
 
-    <iframe class='eb_video eb_bitchute' src='//www.bitchute.com/embed/...' allowfullscreen></iframe>
+    <figure>
+    <iframe class='eb_video eb_bitchute' src='$1' allowfullscreen></iframe>
+    <figure>
+    <figcaption>$2</figcaption>
 
-Supports probably all youtube URL-formats
+-   [Supported youtube-URL formats](https://regex101.com/r/oPBc0O/2)
+-   [Supported bitchute-URL formats](https://regex101.com/r/JFnNuU/2)
 
-    https://www.youtube.com/watch?v=DFYRQ_zQ-gk&feature=featured
-    https://www.youtube.com/watch?v=DFYRQ_zQ-gk
-    http://www.youtube.com/watch?v=DFYRQ_zQ-gk
-    //www.youtube.com/watch?v=DFYRQ_zQ-gk
-    www.youtube.com/watch?v=DFYRQ_zQ-gk
-    https://youtube.com/watch?v=DFYRQ_zQ-gk
-    http://youtube.com/watch?v=DFYRQ_zQ-gk
-    //youtube.com/watch?v=DFYRQ_zQ-gk
-    youtube.com/watch?v=DFYRQ_zQ-gk
-    
-    https://m.youtube.com/watch?v=DFYRQ_zQ-gk
-    http://m.youtube.com/watch?v=DFYRQ_zQ-gk
-    //m.youtube.com/watch?v=DFYRQ_zQ-gk
-    m.youtube.com/watch?v=DFYRQ_zQ-gk
-    
-    https://www.youtube.com/v/DFYRQ_zQ-gk?fs=1&hl=en_US
-    http://www.youtube.com/v/DFYRQ_zQ-gk?fs=1&hl=en_US
-    //www.youtube.com/v/DFYRQ_zQ-gk?fs=1&hl=en_US
-    www.youtube.com/v/DFYRQ_zQ-gk?fs=1&hl=en_US
-    youtube.com/v/DFYRQ_zQ-gk?fs=1&hl=en_US
-    
-    https://www.youtube.com/embed/DFYRQ_zQ-gk?autoplay=1
-    https://www.youtube.com/embed/DFYRQ_zQ-gk
-    http://www.youtube.com/embed/DFYRQ_zQ-gk
-    //www.youtube.com/embed/DFYRQ_zQ-gk
-    www.youtube.com/embed/DFYRQ_zQ-gk
-    https://youtube.com/embed/DFYRQ_zQ-gk
-    http://youtube.com/embed/DFYRQ_zQ-gk
-    //youtube.com/embed/DFYRQ_zQ-gk
-    youtube.com/embed/DFYRQ_zQ-gk
-    
-    https://youtu.be/DFYRQ_zQ-gk?t=120
-    https://youtu.be/DFYRQ_zQ-gk
-    http://youtu.be/DFYRQ_zQ-gk
-    //youtu.be/DFYRQ_zQ-gk
-    youtu.be/DFYRQ_zQ-gk
-    
-    https://www.youtube.com/HamdiKickProduction?v=DFYRQ_zQ-gk
+It is allowed to 
 
 ## Change Log
 
 0.1
 	- Works
+
+1.0
+    - Production
+    
+## Todo
+
+Include more websites / media types like Soundcloud, Vimeo, etc.
 
 ## License
 
